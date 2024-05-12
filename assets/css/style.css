@@ -1,0 +1,149 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.box1{
+    height: 300px;
+    width: 600px;
+    border: 3px solid black;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.box2{
+    width: 200px;
+    padding: 4px;
+    text-align: center;
+    background-color: red;
+    color: white;
+    position: absolute;
+    right: 0;
+    transform: rotate(45deg) translateY(-3px) translateX(57px);
+}
+
+.box3{
+    width: 200px;
+    padding: 4px;
+    text-align: center;
+    background-color: red;
+    color: white;
+    position: absolute;
+    left: 0;
+    transform: rotate(-45deg) translateX(-57px) translateY(3px);
+}
+
+.box4{
+    width: 200px;
+    padding: 4px;
+    text-align: center;
+    background-color: red;
+    color: white;
+    position: absolute;
+    left: 0;
+    transform: rotate(-315deg) translateX(128px) translateY(187px);
+}
+
+.box5{
+    width: 200px;
+    padding: 4px;
+    text-align: center;
+    background-color: red;
+    color: white;
+    position: absolute;
+    left: 0;
+    transform: rotate(315deg) translateX(152px) translateY(467px);
+}
+
+.box0{
+    margin: 100px;
+    width: 800px;
+    height: 500px;
+    border: 3px solid black;
+    position:relative;
+}
+
+.boxA{
+  
+    height: 200px;
+    width: 200px;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.boxB{
+    padding: 20px;
+    background-color: red;
+    height:100%;
+    width: 100%;
+    transition: all 0.7s 1s linear;
+    transform-origin:left ;
+}
+.boxB:hover{
+    cursor: pointer;
+    transform: rotate(120deg);
+    transform: perspective(400px) rotateY(-180deg);
+}
+
+.box11{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    animation-name:boxMove ;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes boxMove{
+    0%{
+        margin-left: 0;
+    }
+    100%{
+        margin-left: calc(100% - 100px);
+        transform: rotate(360deg);
+    }
+}
+
+.box12{
+    border: 3px solid red;
+    height: 500px;
+    width: 800px;
+    position: relative;
+    margin: auto;
+}
+
+.box13{
+    border: 2px solid red;
+    background-color: crimson;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%) ;
+    transition: all 0.7s ease-in-out;
+    animation: inova 10s linear  3;
+}
+
+@keyframes inova{
+    0%{
+        border-top-left-radius: 50px;
+        background-color: brown;
+    }
+    50%{
+        border-top-right-radius: 50px;
+        background-color: aqua;
+    }
+    75%{
+        border-bottom-right-radius: 50px;
+        background-color: crimson;
+    }
+    100%{
+        border-bottom-left-radius: 50px;
+        background-color: darkred;
+    }
+}
